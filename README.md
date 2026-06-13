@@ -1,77 +1,146 @@
-# URBAN ROUTES
+# TEMU E2E AUTOMATION TESTING
 
-*Descripción*
+*Description*
 =
 
-Este proyecto es para pruebas automatizadas de Urban Routes, con esto
-se espera ver el resultado final de pedir un taxi dentro de la aplicación
+This project contains an end-to-end
+automated test scenario for the TEMU 
+web application using Selenium 
+WebDriver. The test automates the 
+complete user journey, starting from 
+user login and ending with the 
+generation of a purchase order for 
+payment at OXXO. The objective is to
+validate critical business flows, ensure
+application stability, and verify that 
+the checkout process functions 
+correctly from start to finish.
 
-## Archivos Principales:
-- `data.py` - Los informacion valida y necesaria
-para realizar las pruebas segun los requisitos
-- `main.py` - Son todas las pruebas
-que se realizaron desde el inicio hasta el final
-para pedir un taxi con algunas variantes que 
-estan en los requisitos
+## Main Files:
 
-## Tecnologías y técnicas utilizadas:
-### Lenguajes de programación:
+- `main.py` - Contains all automated test 
+cases that execute the end-to-end purchasing 
+workflow, including login, product selection,
+cart management, checkout, and purchase order 
+generation.
+
+
+- `locators.py` - Stores all web element locators 
+used throughout the automation framework, 
+improving maintainability and readability.
+
+
+- `data.py` - Contains test data, user credentials,
+product information, and configuration values
+required for test execution.
+
+## Technologies and Testing Techniques Used
+
+### Programming Language:
 
 - Python:  
-Lenguaje principal para escribir las
-pruebas automatizadas
+Primary language used for developing 
+automated test scripts.
 
-### Frameworks y herramientas de automatización:
+### Automation Frameworks and Tools:
 
 - Selenium WebDriver:  
-Para automatizar la interacción con
-el navegador web
-
-+ WebDriverWait:  
-Para implementar esperas explíci
-tas y manejar elementos dinámicos
-
-### Técnicas de testing:
-
-- Automatización de pruebas de UI:  
-Pruebas de interfaz de 
-usuario automatizadas  
+Used to automate browser interactions 
+and validate user actions across the application.
 
 
-- Pruebas funcionales
-Verificación del flujo 
-completo de reserva de taxi
+- WebDriverWait:  
+Implements explicit waits to handle dynamic
+web elements and improve test reliability.
+
+### Testing Approaches
+
+- End-to-End (E2E) Testing:  
+Validates the complete purchasing workflow 
+from login to payment order generation.
 
 
-- Pruebas de regresión:  
-Asegurar que las funcionalidades
-existentes sigan funcionando
+- Functional Testing:  
+Verifies that each feature behaves 
+according to business requirements.
 
 
-### Estrategias de localización:
+- Regression Testing:  
+Ensures existing functionality 
+remains stable after changes or updates.
 
-- Múltiples tipos de localizadores:
-  - ID
+
+- UI Automation Testing:  
+Automates user interface interactions 
+to validate critical user journeys.
+
+````
+### Locator Strategies:
+
+- Multiple locator types are used to ensure
+robust and maintainable test automation: 
+
+  + ID
   + Class Name
-  * XPath
+  + XPath
   + CSS Selectors
   + Name
-  + Tag Name
+  + Tag Name 
 
-### Técnicas de interacción:
+### Automated Test Flow
+- The automated scenario includes:
+  * User Login
+  * Product Search
+  * Product Selection
+  * Add Product to Cart
+  * Shopping Cart Validation
+  * Checkout Process
+  * Shipping Information Validation
+  * Payment Method Selection
+  * OXXO Payment Option Selection
+  * Purchase Order Generation
+  * Final Confirmation Validation
 
-+ Interacción con elementos de entrada
-  + Completar campos de texto
-- Interacción con botones
-  - Clicks y navegación
-+ Manejo de modales
-  + Interacción con ventanas emergentes
+### Interaction Techniques
 
-### Prácticas implementadas:
+- Form Handling:
+  - Text field completion
+  - Dropdown selection
+  - Checkbox and radio button interaction
 
-+ Funciones de espera
-  + Uso correcto de WebDriverWait para elementos dinámicos
-+ Nomenclatura descriptiva
-  + Variables y funciones con nombres claros
-+ Código bien estructurado
-  + Organización clara y legible del código
+
+- Navigation Actions:
+  - Button clicks
+  - Page navigation
+  - Checkout workflow execution
+
+
+- Dynamic Element Handling:
+  - Explicit waits
+  - Element visibility validation
+  - Synchronization management
+
+### Best Practices Implemented
+- Clear Test Structure:  
+Well-organized and maintainable 
+code architecture.
+
+
+- Descriptive Naming Convention:  
+Meaningful variable, function, and test names.
+
+
+- Reusable Components:  
+Common actions and locators are 
+separated to improve maintainability.
+
+
+- Explicit Waits:  
+Proper use of WebDriverWait for
+stable and reliable test execution.
+
+
+- Readable and Scalable Code:  
+Framework designed to support future
+test case expansion and maintenance.
+````
