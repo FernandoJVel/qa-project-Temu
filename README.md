@@ -21,7 +21,9 @@ due to TEMU's anti-bot protection mechanisms, the project
 demonstrates the design and implementation of a robust 
 automation framework capable of handling complex user 
 interactions and dynamic web elements.
+
 ---
+
 ## Test Objective
 The automated test was designed to validate the following 
 business flow:
@@ -39,7 +41,9 @@ The goal was to verify that users could
 successfully complete the purchasing process 
 from beginning to end while ensuring that all 
 critical business requirements were met.
+
 ---
+
 ## Main Files:
 
 - `main.py` - Contains the automated test scenario 
@@ -54,7 +58,9 @@ maintainability and readability.
 - `data.py` - Contains test data, user credentials, 
 product information, and configuration values required 
 for test execution.
+
 ---
+
 ## Technologies Used
 
 ### Programming Language:
@@ -67,11 +73,12 @@ Primary language used to develop the automation framework.
 - Selenium WebDriver:  
 Used to automate browser interactions and simulate real user actions.
 
-
-- WebDriverWait:  
++ WebDriverWait:  
 Used to implement explicit waits and improve test reliability when
 interacting with dynamic web elements.
+
 ---
+
 ## Testing Techniques Applied
 
 - End-to-End Testing (E2E):  
@@ -88,7 +95,9 @@ and expected application behavior.
 - Regression Testing:  
 Validation that existing 
 functionality remains stable and operational.
+
 ---
+
 ## Locator Strategies:
 
 - The project uses multiple locator types
@@ -97,7 +106,9 @@ to improve automation stability and maintainability:
   + Class Name
   + XPath
   + CSS Selectors
+
 ---
+
 ## Why the Test Could Not Be Fully Executed
 During execution, TEMU's anti-bot protection system detected
 the automated browser session and blocked further progression 
@@ -116,7 +127,9 @@ fraudulent activity.
 As a result, the final checkout and purchase 
 order generation steps could not be completed 
 through automation.
+
 ---
+
 ## Key Learnings
 This project provided valuable experience in:
 
@@ -143,7 +156,9 @@ impact UI automation efforts in production environments.
 + __Test Analysis and Troubleshooting__  
 Investigating automation limitations and identifying 
 external factors that affect test execution.
+
 ---
+
 ## Best Practices Implemented
 - Clear Test Structure:  
 Well-organized and maintainable automation architecture.
@@ -162,7 +177,9 @@ stability and reliability.
 + Readable and Scalable Code:  
 Framework designed to support future enhancements 
 and additional test scenarios.
+
 ---
+
 ## Project Outcome
 Although the complete workflow could not 
 be finalized due to TEMU's anti-bot protection 
