@@ -1,3 +1,4 @@
+import data
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -16,12 +17,12 @@ class Temu:
     # Step 2:
     search_field = (By.ID, 'searchInput')
     search_botton = (By.CSS_SELECTOR, 'input#searchInput div[role="button"]')
-    item_location = (By.XPATH, "//h2[@class='_28vQbnbN _2fLnHBGs']//span[contains(text(), 'Audífonos Inalámbricos Nuevos Philips BT5.4 para Correr y Deportes, Auriculares Sobro-Oreja con Ganchos para Orejas, Cancelación de Ruido y Micrófono Incorporado TAT2769']")
+    item_location = (By.XPATH, f"//h2[@class='_28vQbnbN _2fLnHBGs']//span[contains(text(), {data.description})]")
 
     object_selected = (By.XPATH, "//div[@class='_1Zf27vaY']//span")
 
     # Step 3:
-    color = (By.XPATH, "//div[@class='_1thUmrmy']//div[@aria-label='[Negro]']")
+    color = (By.XPATH, "//div[@class='_1thUmrmy']//div[contains(@aria-label, 'Negro')]")
     shopping_cart = (By.XPATH, "//div[@class='_100Uy0HO']//span[@class='_3cgghkPI']")
     go_to_the_cart = (By.CSS_SELECTOR, "div._2oPZebLl div.vd-NrRvD")
 
@@ -110,7 +111,7 @@ class Temu:
         return self.temu_driver.find_elment(*self.color_selected).text
 
     # Step 4:
-    def wait_until_the_shopping_cart_loads(self):
+    def click_buy_botton(self):
         WebDriverWait(self.temu_driver, 10).until \
             (EC.element_to_be_clickable(self.buy_botton)).click()
 
