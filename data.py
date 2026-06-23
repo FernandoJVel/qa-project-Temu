@@ -1,9 +1,9 @@
 temu_url = 'https://www.temu.com/mx'
-email_address = 'address'
+email_address = 'email'
 password_text = 'password'
 account_name = 'name'
 product = "audifonos philips"
-color = "[Negro]"
+color = "Negro"
 payment = "OXXO"
 description = "Audífonos Inalámbricos Nuevos Philips BT5.4 para Correr y Deportes, Auriculares Sobro-Oreja con Ganchos para Orejas, Cancelación de Ruido y Micrófono Incorporado TAT2769"
 final_text = "escanea este código de barras"

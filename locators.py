@@ -6,8 +6,8 @@ from selenium.webdriver.support import expected_conditions as EC
 class Temu:
     # Step 1:
     account_field = (By.XPATH, '//div[@class="_10iL_95W"]//div[@class=\
-                           "_2CSyqUbD"]')
-    email_field = (By.CSS_SELECTOR, "div.left-1kKiY div.inputGroupWrap-2MjaI")
+                           "_2CSyqUbD"]/div[@role="button"]')
+    email_field = (By.CSS_SELECTOR, "div[dir='ltr'] input[type='text']")
     continue_botton = (By.CSS_SELECTOR, "#submit-button")
     password_field = (By.CSS_SELECTOR, "#pwdInputInLoginDialog")
     login_botton = (By.CSS_SELECTOR, "#submit-button")

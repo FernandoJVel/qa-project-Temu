@@ -10,7 +10,9 @@ class TestTemu:
         from selenium.webdriver.edge.options import Options
 
         edge_options = Options()
-        edge_options.add_argument("--inprivate")
+
+        edge_options.add_experimental_option("useAutomationExtension", False)
+        edge_options.add_experimental_option("excludeSwitches", ["enable-automation"])
 
         cls.driver = webdriver.Edge(options=edge_options)
 
